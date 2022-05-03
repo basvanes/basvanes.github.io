@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        body {background-color: rgb(195, 227, 231);}
+h1, h2,h3,p {color: black; font-family: Verdana, Geneva, Tahoma,
+sans-serif;}
+button, p, h1, h2, h3 {margin-top: 0;margin-bottom: 0;}
+
+/* Excersise 1 */
+#image { 
+    visibility: hidden;
+    width: 320px;
+    height: 320px;
+ }
+
+
+ /*Excersise 2*/
+
+ .Excersise2 {
+     margin-top: 50px;
+ }
+
+  /*excersise 3*/
+
+  .Excersise3 {
+    margin-top: 50px;
+}
+
+#Information {
+
+    visibility: hidden;
+    margin-top: 20px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  .row {margin: 0 -5px;}
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+
+ /*Excersise 4*/
+
+ .Excersise4 {
+    margin-top: 50px;
+}
+
+    </style>
+
+    <!-- Excersise 1-->
+<div class="Excersise1">
+    <h2> Excersise1 </h2>
+    <img id="image" src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80">
+
+    <div class="buttonEx1">
+        <button> <a id="showImage">Show Dog</a> </button> 
+        <button> <a id="hideImage">Hide Dog</a> </button>
+    </div>
+</div>
+
+
+<!-- Excersise 2-->
+<div class="Excersise2">
+    <h2> Excersise2 </h2>
+
+    
+    Counter: <span id="Value">0</span> 
+
+    <div class="buttonEx2">
+        <button id = add class="button button1" onclick="javascript:add(1)">Add 1</button> 
+
+        <button id = add class="button button1" onclick="javascript:add(3)">Add 3</button> 
+
+        <button  id ="reset" class="button button1"
+        onclick="javascript:reset()">Reset Value</button> 
+    </div>
+
+</div>
+
+<!-- Excersise 3-->
+<div class="Excersise3">
+    <h2>Excersise3</h2>
+
+<div class="buttonEx3">
+    <button id="ShowInfo">Show Information</button>
+</div>
+
+<div id="Information">
+    <div class="row">
+        <div class="column">
+          <div class="card">
+          <h3>Boeing 737</h3>
+          <p>Speed: 850 </p>
+          <p>Chairs: 186 </p>
+          </div>
+
+        </div>
+
+        <div class="column">
+          <div class="card">
+        <h3>Boeing 747</h3>
+        <p>Speed: 920 </p>
+        <p>Chairs: 408 </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3>Boeing 777</h3>
+            <p>Speed: 905 </p>
+            <p>Chairs: 408 </p>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- EXcersise 4 -->
+
+<div class="Excersise4">
+    <h2> Excersise 4 </h2>
+
+    <div class="content"></div>
+    <p id="text">Click to cycle trough the planets</p>
+    <button id="left"  onclick="getNext">PREV</button>
+    <button id="right"  onclick="getNext">NEXT</button>
+</div>
+
+
+
+
+<script>
+        
+// excersise 1
+document.getElementById("showImage").onclick = function() {
+    document.getElementById("image").style.visibility = "visible";
+}
+
+document.getElementById("hideImage").onclick = function() {
+    document.getElementById("image").style.visibility = "hidden";
+}
+
+
+// excersise 2
+
+
+var counter = 0;
+var a = 0;
+var add = function(valueToAdd){
+    a += valueToAdd;
+    document.getElementById('Value').innerHTML = a;
+    }
+    
+
+var reset= function(){
+    a = 0;
+    document.getElementById('Value').innerHTML = a;
+    }
+
+
+//excerise 3
+
+
+
+document.getElementById("ShowInfo").onclick = function() {
+    document.getElementById("Information").style.visibility = "visible";
+}
+
+
+
+//excersise 4 
+
+var message = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus","Neptune"],
+        pel = document.getElementById("text"),
+        idx = 0,
+    getNext = e => pel.innerText = e.target.id == "right" ? message[idx = ++idx%message.length]
+                                                          : message[idx = (message.length - (message.length - --idx)%message.length)%message.length];
+document.getElementById("right").onclick = getNext;
+document.getElementById("left").onclick = getNext;
+
+
+
+    </script>
+</body>
+</html>

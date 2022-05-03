@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>document</title>
+</head>
+<body>
+
+    <style>
+        .scaleX{
+    transform: scaleX(-1);
+}
+
+.scaleY{
+    transform: scaleY(-1);
+}
+
+.scaleXY{
+    transform: rotate(180deg);
+}
+
+.rotate35{
+    transform: rotate(1260deg);
+}
+
+.rotate1{
+    transform: rotate(-1deg);
+}
+
+.rotate50{
+    transform: rotate(50deg);
+}
+
+.scale05{
+    transform: scale(0.5);
+}
+
+.scale075{
+    transform: scale(0.75);
+}
+
+.rotate30{
+    transform: rotate(210deg);
+}
+
+.rotate500{
+    transform: rotate(-500deg);
+}
+
+.rotate45{
+    transform: rotate(45deg);
+}
+
+.rotate87{
+    transform: rotate(-87deg);
+}
+
+.stick_top{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.stick_bottom{
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+}
+    </style>
+    <div class="card stick_top">
+        <p>top</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2" style="width: 15%;">
+                <div class="card">
+                    <p>15% of the standard width</p>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="unmirrored">
+                    <img class="scaleX" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="mirrored horizontally">
+                    <img class="scaleY" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="mirrored vertically ">
+                    <img class="scaleXY" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="mirrored both horizontally and vertically">
+                </div>
+            </div>
+            
+            <div class="col" style="width: 150%;">
+                <div class="card">
+                    <p>150% standard size</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col rotate35">
+                <div class="card">
+                    <p>3.5 full rotation to the right</p>
+                </div>
+            </div>
+            <div class="col rotate1" style="width: 99%; height: 101%;">
+                <div class="card">
+                    99% of standard width, 101% of standard height and rotated 1 degree to the left
+                </div>
+            </div>
+            <div class="col scaleY" style="width: 80%; height: 90%;">
+                <div class="card">
+                    Mirrored vertically, 90% of standard height and 80% of standard width
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="width: 80%;">
+                <div class="card">
+                    80% of standard size
+                </div>
+            </div>
+            <div class="col" style="width: 101%;">
+                <div class="card">
+                    101% of standard width
+                </div>
+            </div>
+            <div class="col rotate50">
+                <div class="card">
+                    Rotated 50 degrees
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-2">
+                <div class="card">
+                    <img class="scale05" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt=" half the standard height">
+                    <img class="scale075" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="3/4th of the standard height">
+                </div>
+            </div>
+            <div class="col-md-2" style="margin-left: 50px;">
+                <div class="card rotate30">
+                    <img src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="Mirrored horizotally and rotated 30 degrees">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img class="scaleX" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="flipped horizontally">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img class="scaleY" src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="flipped vertically">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-md-2 rotate500">
+                <div class="card">
+                    <p>Rotated 500 degrees to the left.</p>
+                </div>
+            </div>
+            <div class="col-md-2 rotate45" style="width: 45%;">
+                <div class="card">
+                    <p>Rotated 45 degrees and 45% of standard size</p>
+                </div>
+            </div>
+            <div class="col rotate87" style="height: 87%;">
+                <div class="card">
+                    <p>Rotated 87 degrees to the left, 87% of standard height and be flipped either horizontally or vertically</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card stick_bottom">
+        <p>bottom</p>
+    </div>
+</body>
+</html>
